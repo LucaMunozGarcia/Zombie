@@ -85,7 +85,7 @@ canvas{display:block;pointer-events:none}
 <div class="menu-bg"></div>
 <div class="menu-title">ZOMBIE DEFENSE</div>
 <div class="menu-sub">Ultimate Edition</div>
-<button class="menu-btn" onclick="startGame()">▶ STARTEN</button>
+<button class="menu-btn" onclick="startGame()">STARTEN</button>
 <div class="menu-info">
 <span>WASD</span> Bewegen · <span>Maus</span> Zielen · <span>Klick</span> Schießen<br>
 <span>1-5</span> Waffen · <span>E</span> Aufheben · <span>Shop</span> rechts
@@ -94,66 +94,66 @@ canvas{display:block;pointer-events:none}
 <canvas id="game"></canvas>
 <div id="hud">
 <div class="hud-panel hud-tl">
-<div class="hud-label"><span>❤️ HP</span><span class="hud-val" id="hp-val">100/100</span></div>
+<div class="hud-label"><span>HP</span><span class="hud-val" id="hp-val">100/100</span></div>
 <div class="bar"><div class="bar-fill bar-hp" id="hp-bar" style="width:100%"></div></div>
-<div class="hud-label" style="margin-top:8px"><span>🏠 Basis</span><span class="hud-val" id="base-val">1000/1000</span></div>
+<div class="hud-label" style="margin-top:8px"><span>BASIS</span><span class="hud-val" id="base-val">1000/1000</span></div>
 <div class="bar"><div class="bar-fill bar-base" id="base-bar" style="width:100%"></div></div>
 </div>
 <div class="hud-panel hud-tc">
 <div class="wave-badge">WELLE <span class="n" id="wave-num">0</span></div>
 <div class="wave-timer" id="wave-timer"></div>
-<div class="weapon-info" id="weapon-info">🔫 Pistole</div>
+<div class="weapon-info" id="weapon-info">Pistole</div>
 </div>
 <div class="hud-panel hud-tr">
-<div class="money">💰 <span id="money-val">50</span><span class="kills" id="kills-val">💀 0</span></div>
+<div class="money">$ <span id="money-val">50</span><span class="kills" id="kills-val">0 Kills</span></div>
 </div>
 </div>
 <div id="shop">
-<div class="shop-hdr">⚔️ SHOP</div>
-<div class="shop-sec"><div class="shop-title">🏗️ Upgrades</div>
-<button class="shop-btn" onclick="upgradeBase('hp')"><span class="ic">❤️</span><span class="nm">Basis HP +500</span><span class="cs">100</span></button>
-<button class="shop-btn" onclick="upgradeBase('dmg')"><span class="ic">⚔️</span><span class="nm">Schaden +5</span><span class="cs">80</span></button>
-<button class="shop-btn" onclick="upgradeBase('spd')"><span class="ic">🏃</span><span class="nm">Speed +0.5</span><span class="cs">120</span></button>
-<button class="shop-btn" onclick="upgradeBase('fr')"><span class="ic">🔥</span><span class="nm">Feuerrate</span><span class="cs">150</span></button>
-<button class="shop-btn" onclick="upgradeBase('reg')"><span class="ic">💚</span><span class="nm">Regen +1/s</span><span class="cs">200</span></button>
-<button class="shop-btn" onclick="upgradeBase('rng')"><span class="ic">🎯</span><span class="nm">Reichweite</span><span class="cs">100</span></button>
+<div class="shop-hdr">SHOP</div>
+<div class="shop-sec"><div class="shop-title">UPGRADES</div>
+<button class="shop-btn" onclick="upgradeBase('hp')"><span class="ic">+</span><span class="nm">Basis HP +500</span><span class="cs">$100</span></button>
+<button class="shop-btn" onclick="upgradeBase('dmg')"><span class="ic">+</span><span class="nm">Schaden +5</span><span class="cs">$80</span></button>
+<button class="shop-btn" onclick="upgradeBase('spd')"><span class="ic">+</span><span class="nm">Speed +0.5</span><span class="cs">$120</span></button>
+<button class="shop-btn" onclick="upgradeBase('fr')"><span class="ic">+</span><span class="nm">Feuerrate</span><span class="cs">$150</span></button>
+<button class="shop-btn" onclick="upgradeBase('reg')"><span class="ic">+</span><span class="nm">Regen +1/s</span><span class="cs">$200</span></button>
+<button class="shop-btn" onclick="upgradeBase('rng')"><span class="ic">+</span><span class="nm">Reichweite</span><span class="cs">$100</span></button>
 </div>
-<div class="shop-sec"><div class="shop-title">🤖 NPCs</div>
-<button class="shop-btn" onclick="startPlace('gunner')"><span class="ic">🔫</span><span class="nm">Schütze</span><span class="cs">50</span></button>
-<button class="shop-btn" onclick="startPlace('sniper')"><span class="ic">🎯</span><span class="nm">Sniper</span><span class="cs">120</span></button>
-<button class="shop-btn" onclick="startPlace('shotgunner')"><span class="ic">💥</span><span class="nm">Shotgun</span><span class="cs">100</span></button>
-<button class="shop-btn" onclick="startPlace('melee')"><span class="ic">⚔️</span><span class="nm">Nahkampf</span><span class="cs">70</span></button>
-<button class="shop-btn" onclick="startPlace('freezer')"><span class="ic">❄️</span><span class="nm">Froster</span><span class="cs">150</span></button>
-<button class="shop-btn" onclick="startPlace('healer')"><span class="ic">💚</span><span class="nm">Heiler</span><span class="cs">200</span></button>
-<button class="shop-btn" onclick="startPlace('launcher')"><span class="ic">🚀</span><span class="nm">Rakete</span><span class="cs">250</span></button>
-<button class="shop-btn" onclick="startPlace('tesla')"><span class="ic">⚡</span><span class="nm">Tesla</span><span class="cs">300</span></button>
+<div class="shop-sec"><div class="shop-title">NPCs</div>
+<button class="shop-btn" onclick="startPlace('gunner')"><span class="ic">G</span><span class="nm">Schütze</span><span class="cs">$50</span></button>
+<button class="shop-btn" onclick="startPlace('sniper')"><span class="ic">S</span><span class="nm">Sniper</span><span class="cs">$120</span></button>
+<button class="shop-btn" onclick="startPlace('shotgunner')"><span class="ic">S</span><span class="nm">Shotgun</span><span class="cs">$100</span></button>
+<button class="shop-btn" onclick="startPlace('melee')"><span class="ic">M</span><span class="nm">Nahkampf</span><span class="cs">$70</span></button>
+<button class="shop-btn" onclick="startPlace('freezer')"><span class="ic">F</span><span class="nm">Froster</span><span class="cs">$150</span></button>
+<button class="shop-btn" onclick="startPlace('healer')"><span class="ic">H</span><span class="nm">Heiler</span><span class="cs">$200</span></button>
+<button class="shop-btn" onclick="startPlace('launcher')"><span class="ic">R</span><span class="nm">Rakete</span><span class="cs">$250</span></button>
+<button class="shop-btn" onclick="startPlace('tesla')"><span class="ic">T</span><span class="nm">Tesla</span><span class="cs">$300</span></button>
 </div>
-<div class="shop-sec"><div class="shop-title">🏗️ Verteidigung</div>
-<button class="shop-btn" onclick="startPlace('wall')"><span class="ic">🧱</span><span class="nm">Mauer</span><span class="cs">20</span></button>
-<button class="shop-btn" onclick="startPlace('spike')"><span class="ic">🔺</span><span class="nm">Stachel</span><span class="cs">40</span></button>
-<button class="shop-btn" onclick="startPlace('turret')"><span class="ic">🔫</span><span class="nm">Turm</span><span class="cs">180</span></button>
+<div class="shop-sec"><div class="shop-title">VERTEIDIGUNG</div>
+<button class="shop-btn" onclick="startPlace('wall')"><span class="ic">W</span><span class="nm">Mauer</span><span class="cs">$20</span></button>
+<button class="shop-btn" onclick="startPlace('spike')"><span class="ic">S</span><span class="nm">Stachel</span><span class="cs">$40</span></button>
+<button class="shop-btn" onclick="startPlace('turret')"><span class="ic">T</span><span class="nm">Turm</span><span class="cs">$180</span></button>
 </div>
-<div class="shop-sec"><div class="shop-title">💊 Items</div>
-<button class="shop-btn" onclick="buyItem('heal')"><span class="ic">💊</span><span class="nm">Heilung +50</span><span class="cs">30</span></button>
-<button class="shop-btn" onclick="buyItem('nuke')"><span class="ic">☢️</span><span class="nm">Atombombe</span><span class="cs">500</span></button>
-<button class="shop-btn" onclick="buyItem('shield')"><span class="ic">🛡️</span><span class="nm">Schild 10s</span><span class="cs">100</span></button>
+<div class="shop-sec"><div class="shop-title">ITEMS</div>
+<button class="shop-btn" onclick="buyItem('heal')"><span class="ic">+</span><span class="nm">Heilung +50</span><span class="cs">$30</span></button>
+<button class="shop-btn" onclick="buyItem('nuke')"><span class="ic">!</span><span class="nm">Atombombe</span><span class="cs">$500</span></button>
+<button class="shop-btn" onclick="buyItem('shield')"><span class="ic">O</span><span class="nm">Schild 10s</span><span class="cs">$100</span></button>
 </div>
 </div>
 <div id="announce"><div class="ann-txt"></div><div class="ann-sub"></div></div>
 <div id="gameover" onclick="restart()" ontouchstart="restart()"><div class="go-title">GAME OVER</div><div class="go-stats"></div><div class="go-restart">Tippe zum Neustarten</div></div>
-<div id="placebar"><span class="place-info" id="placelabel"></span><button class="place-btn ok" onclick="confirmPlace()" ontouchstart="event.stopPropagation();confirmPlace()">✅ Platzieren</button><button class="place-btn cancel" onclick="cancelPlace()" ontouchstart="event.stopPropagation();cancelPlace()">❌ Abbrechen</button></div>
-<div id="pickup">💰 Tippe zum Aufheben!</div>
+<div id="placebar"><span class="place-info" id="placelabel"></span><button class="place-btn ok" onclick="confirmPlace()" ontouchstart="event.stopPropagation();confirmPlace()">PLATZIEREN</button><button class="place-btn cancel" onclick="cancelPlace()" ontouchstart="event.stopPropagation();cancelPlace()">ABBRECHEN</button></div>
+<div id="pickup">$ Tippe zum Aufheben!</div>
 <div id="minimap-wrap"><canvas id="minimap" width="160" height="160"></canvas></div>
 <div id="joy"><div id="stick"></div></div>
 <div id="mbtn">
-<div class="mbtn mbtn-shoot" id="shootbtn">🔫</div>
+<div class="mbtn mbtn-shoot" id="shootbtn">X</div>
 <div style="display:flex;gap:8px">
-<div class="mbtn mbtn-weapon" id="weaponbtn">🔄</div>
-<div class="mbtn mbtn-shop" id="shopbtn">🛒</div>
+<div class="mbtn mbtn-weapon" id="weaponbtn">W</div>
+<div class="mbtn mbtn-shop" id="shopbtn">S</div>
 </div>
 </div>
 <div id="notif"></div>
-<div id="shield-ind">🛡️ Schild aktiv</div>
+<div id="shield-ind">SCHILD AKTIV</div>
 
 <script>
 const C=document.getElementById('game'),X=C.getContext('2d');
@@ -172,9 +172,7 @@ let base={hp:1000,mhp:1000,lv:1};
 let bul=[],zom=[],npc=[],bld=[],par=[],dmg=[],picks=[],trees=[],cityBld=[];
 const nC={gunner:50,sniper:120,shotgunner:100,melee:70,freezer:150,healer:200,launcher:250,tesla:300,wall:20,spike:40,turret:180};
 const nN={gunner:'Schütze',sniper:'Sniper',shotgunner:'Shotgun',melee:'Nahkampf',freezer:'Froster',healer:'Heiler',launcher:'Rakete',tesla:'Tesla',wall:'Mauer',spike:'Stachel',turret:'Turm'};
-const wIcons={pistol:'🔫',rifle:'🔫',shotgun:'💥',sniper:'🎯',minigun:'🔥'};
 
-// Audio
 let ACtx;try{ACtx=new(window.AudioContext||window.webkitAudioContext)}catch(e){}
 function playSound(freq,dur,type='sine',vol=.08){if(!ACtx)return;try{const o=ACtx.createOscillator(),g=ACtx.createGain();o.connect(g);g.connect(ACtx.destination);o.frequency.value=freq;o.type=type;g.gain.setValueAtTime(vol,ACtx.currentTime);g.gain.exponentialRampToValueAtTime(.001,ACtx.currentTime+dur);o.start();o.stop(ACtx.currentTime+dur)}catch(e){}}
 function shootSnd(){playSound(300+Math.random()*200,.05,'square',.04)}
@@ -195,7 +193,7 @@ function genWorld(){
     let t=Math.random();
     trees.push(t<.45?{x,y,type:'pine',r:18+Math.random()*12,h:40+Math.random()*30}:t<.8?{x,y,type:'oak',r:20+Math.random()*15,h:35+Math.random()*20}:{x,y,type:'dead',r:12+Math.random()*8,h:30+Math.random()*25});
   }
-  let cities=[{cx:600,cy:600,n:'NORDSTADT'},{cx:WW-600,cy:600,n:'OSTSTADT'},{cx:600,cy:WH-600,n:'WESTSTADT'},{cx:WW-600,cy:WH-600,n:'SÜDSTADT'}];
+  let cities=[{cx:600,cy:600,n:'NORDSTADT'},{cx:WW-600,cy:600,n:'OSTSTADT'},{cx:600,cy:WH-600,n:'WESTSTADT'},{cx:WW-600,cy:WH-600,n:'SUEDSTADT'}];
   for(let c of cities){
     for(let i=0;i<5+Math.floor(Math.random()*4);i++){
       let bx=c.cx+Math.random()*350-175,by=c.cy+Math.random()*350-175;
@@ -206,7 +204,6 @@ function genWorld(){
   for(let i=0;i<30;i++)picks.push({x:200+Math.random()*(WW-400),y:200+Math.random()*(WH-400),val:3+Math.floor(Math.random()*12),type:'cash',bob:Math.random()*10});
 }
 
-// Input
 addEventListener('keydown',e=>{keys[e.key.toLowerCase()]=true;
   if(e.key>='1'&&e.key<='5'){let w=['pistol','rifle','shotgun','sniper','minigun'];P.weapon=w[+e.key-1]}
   if(e.key.toLowerCase()==='e')tryPickup();
@@ -235,7 +232,7 @@ function startPlace(t){
   if(P.money<nC[t]){notify('Nicht genug Geld!','#f44');return}
   placing=t;placeX=P.x+Math.cos(P.ang)*80;placeY=P.y+Math.sin(P.ang)*80;
   document.getElementById('placebar').style.display='flex';
-  document.getElementById('placelabel').textContent='▶ '+nN[t]+' ('+nC[t]+'💰)';
+  document.getElementById('placelabel').textContent=nN[t]+' ($'+nC[t]+')';
   if(ACtx&&ACtx.state==='suspended')ACtx.resume();
 }
 function movePlace(){if(!mob){placeX=wmx;placeY=wmy}else{placeX=P.x+Math.cos(P.ang)*100;placeY=P.y+Math.sin(P.ang)*100}}
@@ -276,8 +273,8 @@ function upgradeBase(s){
 }
 function buyItem(i){
   if(i==='heal'&&P.money>=30){P.money-=30;P.hp=Math.min(P.mhp,P.hp+50);notify('+50 HP!','#4f4');pickupSnd()}
-  if(i==='nuke'&&P.money>=500){P.money-=500;zom.forEach(z=>{z.hp-=150;sP(z.x,z.y,'#ff0',10)});sP(P.x,P.y,'#fff',50);shake=25;boomSnd();notify('☢️ ATOMBOMBE!','#f80')}
-  if(i==='shield'&&P.money>=100){P.money-=100;shieldTimer=600;notify('🛡️ Schild aktiv!','#4af');pickupSnd()}
+  if(i==='nuke'&&P.money>=500){P.money-=500;zom.forEach(z=>{z.hp-=150;sP(z.x,z.y,'#ff0',10)});sP(P.x,P.y,'#fff',50);shake=25;boomSnd();notify('ATOMBOMBE!','#f80')}
+  if(i==='shield'&&P.money>=100){P.money-=100;shieldTimer=600;notify('Schild aktiv!','#4af');pickupSnd()}
 }
 
 const zT={normal:{hp:30,spd:1.2,dmg:5,r:15,c:'#5a5',m:5},fast:{hp:15,spd:2.8,dmg:3,r:13,c:'#a4a',m:7},tank:{hp:120,spd:.7,dmg:15,r:24,c:'#664',m:15},spitter:{hp:25,spd:1,dmg:8,r:14,c:'#a84',m:10,rng:1},exploder:{hp:40,spd:1.5,dmg:25,r:18,c:'#a44',m:12,er:60},ghost:{hp:20,spd:1.8,dmg:6,r:14,c:'#88f',m:10,gh:1},boss:{hp:500,spd:.5,dmg:30,r:35,c:'#f44',m:100},swarm:{hp:10,spd:2.2,dmg:2,r:10,c:'#8a4',m:3},armored:{hp:80,spd:.9,dmg:10,r:18,c:'#888',m:15,ar:.5}};
@@ -299,7 +296,7 @@ function spawnWave(){
     let a=Math.random()*Math.PI*2,d=600+Math.random()*200;
     let sx=Math.max(50,Math.min(WW-50,P.x+Math.cos(a)*d)),sy=Math.max(50,Math.min(WH-50,P.y+Math.sin(a)*d));
     zom.push({t,x:sx,y:sy,hp:zt.hp*hm,mhp:zt.hp*hm,spd:zt.spd,dmg:zt.dmg,r:zt.r,c:zt.c,m:zt.m,ang:0,walk:Math.random()*10,rng:zt.rng||0,er:zt.er||0,gh:zt.gh||0,ar:zt.ar||0,ht:0,at:0,sl:0,sm:1});
-    if(wave%5===0&&sp===0){let bt=zT.boss;zom.push({t:'boss',x:sx+50,y:sy,hp:bt.hp*hm*1.5,mhp:bt.hp*hm*1.5,spd:bt.spd*1.2,dmg:bt.dmg*1.5,r:bt.r*1.3,c:bt.c,m:bt.m*2,ang:0,walk:0,ht:0,at:0,sl:0,sm:1});notify('💀 BOSS ZOMBIE!','#f44');boomSnd()}
+    if(wave%5===0&&sp===0){let bt=zT.boss;zom.push({t:'boss',x:sx+50,y:sy,hp:bt.hp*hm*1.5,mhp:bt.hp*hm*1.5,spd:bt.spd*1.2,dmg:bt.dmg*1.5,r:bt.r*1.3,c:bt.c,m:bt.m*2,ang:0,walk:0,ht:0,at:0,sl:0,sm:1});notify('BOSS ZOMBIE!','#f44');boomSnd()}
     sp++;
   },400);
 }
@@ -350,9 +347,8 @@ function update(){
   if(!waveOn){waveT--;if(waveT<=0){spawnWave();waveT=600}}
   else if(zom.filter(z=>!z.ambient).length===0){waveOn=false;waveT=600}
   let wt=document.getElementById('wave-timer');
-  if(!waveOn&&waveT>0)wt.textContent='Nächste Welle: '+Math.ceil(waveT/60)+'s';else wt.textContent=zom.length>0?'🧟 '+zom.length:'';
+  if(!waveOn&&waveT>0)wt.textContent='Nächste Welle: '+Math.ceil(waveT/60)+'s';else wt.textContent=zom.length>0?zom.length+' Zombies':'';
   ambientSpawn();
-  // Bullets
   for(let i=bul.length-1;i>=0;i--){
     let b=bul[i];b.x+=b.vx;b.y+=b.vy;b.tr+=Math.hypot(b.vx,b.vy);
     if(b.tr>b.rng||b.x<0||b.x>WW||b.y<0||b.y>WH){bul.splice(i,1);continue}
@@ -360,7 +356,6 @@ function update(){
     if(b.fr){for(let j=zom.length-1;j>=0;j--){let z=zom[j];if(dist(b,z)<z.r+4){let d=b.d;if(z.ar)d*=(1-z.ar);z.hp-=d;z.ht=6;sD(z.x,z.y-z.r,d);sP(b.x,b.y,z.c,3);hitSnd();bul.splice(i,1);break}}}
     else{if(shieldTimer>0&&dist(b,P)<P.r+12){sP(b.x,b.y,'#4af',5);bul.splice(i,1);continue}if(dist(b,P)<P.r+4){P.hp-=b.d;sD(P.x,P.y-P.r,b.d,'#f44');shake=5;bul.splice(i,1);continue}for(let n of npc)if(dist(b,n)<n.r+4){n.hp-=b.d;bul.splice(i,1);break}}
   }
-  // Zombies
   for(let i=zom.length-1;i>=0;i--){
     let z=zom[i];if(z.ht>0)z.ht--;if(z.sl>0)z.sl--;else z.sm=1;
     if(z.hp<=0){P.money+=z.m;kills++;sP(z.x,z.y,z.c,12);
@@ -382,7 +377,6 @@ function update(){
     if(z.at>0)z.at--;
     for(let j=i+1;j<zom.length;j++){let z2=zom[j],d=dist(z,z2);if(d<z.r+z2.r&&d>0){let o=(z.r+z2.r-d)/2,ax=(z2.x-z.x)/d*o,ay=(z2.y-z.y)/d*o;z.x-=ax;z.y-=ay;z2.x+=ax;z2.y+=ay}}
   }
-  // NPCs
   for(let i=npc.length-1;i>=0;i--){
     let n=npc[i];if(n.hp<=0){sP(n.x,n.y,'#fff',12);npc.splice(i,1);continue}if(n.ft>0)n.ft--;
     let cl=null,cd=1e9;for(let z of zom){let d=dist(n,z);if(d<cd){cd=d;cl=z}}
@@ -404,11 +398,10 @@ function update(){
   document.getElementById('base-bar').style.width=(base.hp/base.mhp*100)+'%';
   document.getElementById('wave-num').textContent=wave;
   document.getElementById('money-val').textContent=P.money;
-  document.getElementById('kills-val').textContent='💀'+kills;
-  document.getElementById('weapon-info').textContent=(wIcons[P.weapon]||'🔫')+' '+P.wpn[P.weapon].nm;
+  document.getElementById('kills-val').textContent=kills+' Kills';
+  document.getElementById('weapon-info').textContent=P.wpn[P.weapon].nm;
 }
 
-// === DRAW ===
 function draw(){
   let nightAlpha=Math.max(0,Math.sin(dayTime*Math.PI*2))*0.35;
   X.fillStyle=`hsl(${120+Math.sin(dayTime*6.28)*10},${15+Math.sin(dayTime*6.28)*5}%,${12+Math.sin(dayTime*6.28)*4}%)`;
@@ -416,24 +409,20 @@ function draw(){
   X.save();
   if(shake>0){X.translate((Math.random()-.5)*shake*1.5,(Math.random()-.5)*shake*1.5)}
   X.translate(-cam.x,-cam.y);
-  // Ground
   let gs=200,gsx=Math.floor(cam.x/gs)*gs,gsy=Math.floor(cam.y/gs)*gs;
   X.fillStyle='rgba(30,50,28,.3)';
   for(let x=gsx;x<cam.x+C.width+gs;x+=gs)for(let y=gsy;y<cam.y+C.height+gs;y+=gs){
     let seed=(x*7+y*13)%100;if(seed<30){X.beginPath();X.arc(x+seed,y+seed*.5,20+seed*.3,0,Math.PI*2);X.fill()}}
-  // Grid
   X.strokeStyle='rgba(30,50,28,.4)';X.lineWidth=.5;
   let gg=80,sx2=Math.floor(cam.x/gg)*gg,sy2=Math.floor(cam.y/gg)*gg;
   for(let x=sx2;x<cam.x+C.width+gg;x+=gg){X.beginPath();X.moveTo(x,cam.y);X.lineTo(x,cam.y+C.height);X.stroke()}
   for(let y=sy2;y<cam.y+C.height+gg;y+=gg){X.beginPath();X.moveTo(cam.x,y);X.lineTo(cam.x+C.width,y);X.stroke()}
-  // Roads
   X.fillStyle='#2a2a28';X.fillRect(0,BY-15,WW,30);X.fillRect(BX-15,0,30,WH);
   let cities=[[600,600],[WW-600,600],[600,WH-600],[WW-600,WH-600]];
   for(let[cx,cy]of cities){X.save();X.translate(cx,cy);X.rotate(Math.atan2(BY-cy,BX-cx));X.fillRect(0,-12,Math.hypot(BX-cx,BY-cy),24);X.restore()}
   X.strokeStyle='#444430';X.lineWidth=2;X.setLineDash([20,20]);
   X.beginPath();X.moveTo(0,BY);X.lineTo(WW,BY);X.stroke();
   X.beginPath();X.moveTo(BX,0);X.lineTo(BX,WH);X.stroke();X.setLineDash([]);
-  // City buildings
   for(let b of cityBld){
     if(b.x+b.w<cam.x-50||b.x>cam.x+C.width+50||b.y+b.h<cam.y-50||b.y>cam.y+C.height+50)continue;
     X.fillStyle='rgba(0,0,0,.3)';X.fillRect(b.x+4,b.y+4,b.w,b.h);
@@ -445,10 +434,8 @@ function draw(){
     if(b.door){X.fillStyle='#2a2015';X.fillRect(b.x+b.w/2-6,b.y+b.h-18,12,18)}
     X.strokeStyle='rgba(0,0,0,.3)';X.lineWidth=1.5;X.strokeRect(b.x,b.y,b.w,b.h);
   }
-  // City labels
-  let cityNames=['NORDSTADT','OSTSTADT','WESTSTADT','SÜDSTADT'];
+  let cityNames=['NORDSTADT','OSTSTADT','WESTSTADT','SUEDSTADT'];
   for(let i=0;i<4;i++){let[cx,cy]=cities[i];X.fillStyle='rgba(255,100,100,.2)';X.font='bold 13px Arial';X.textAlign='center';X.fillText(cityNames[i],cx,cy-120);X.strokeStyle='rgba(255,50,50,.06)';X.lineWidth=2;X.setLineDash([10,10]);X.beginPath();X.arc(cx,cy,200,0,Math.PI*2);X.stroke();X.setLineDash([])}
-  // Pickups
   for(let pk of picks){
     if(pk.x<cam.x-30||pk.x>cam.x+C.width+30||pk.y<cam.y-30||pk.y>cam.y+C.height+30)continue;
     let by=Math.sin(pk.bob)*3;
@@ -457,21 +444,18 @@ function draw(){
     X.fillStyle='#aa8800';X.font='bold 7px Arial';X.textAlign='center';X.textBaseline='middle';X.fillText('$',pk.x,pk.y+by+1);
     if(nearPickup===pk){X.strokeStyle='#ff0';X.lineWidth=2;X.beginPath();X.arc(pk.x,pk.y+by,12,0,Math.PI*2);X.stroke()}
   }
-  // Placed buildings
   for(let b of bld){
     if(b.x<cam.x-60||b.x>cam.x+C.width+60||b.y<cam.y-60||b.y>cam.y+C.height+60)continue;
     if(b.t==='wall'){X.save();X.translate(b.x,b.y);X.rotate(b.ang);X.fillStyle='rgba(0,0,0,.3)';X.fillRect(-b.w/2+3,-b.h/2+3,b.w,b.h);X.fillStyle='#776644';X.fillRect(-b.w/2,-b.h/2,b.w,b.h);for(let bx=-b.w/2;bx<b.w/2;bx+=12){X.strokeStyle='#665533';X.lineWidth=1;X.beginPath();X.moveTo(bx,-b.h/2);X.lineTo(bx,b.h/2);X.stroke()}X.strokeStyle='#998866';X.lineWidth=2;X.strokeRect(-b.w/2,-b.h/2,b.w,b.h);X.restore();X.fillStyle='#300';X.fillRect(b.x-18,b.y-20,36,4);X.fillStyle='#0c0';X.fillRect(b.x-18,b.y-20,36*(b.hp/b.mhp),4)}
     if(b.t==='spike'){X.save();X.translate(b.x,b.y);X.fillStyle='rgba(0,0,0,.2)';X.beginPath();X.arc(2,2,b.r,0,Math.PI*2);X.fill();X.fillStyle='#883333';X.beginPath();for(let a=0;a<Math.PI*2;a+=Math.PI/6){let r1=b.r,r2=b.r*.45;X.lineTo(Math.cos(a)*r1,Math.sin(a)*r1);X.lineTo(Math.cos(a+Math.PI/12)*r2,Math.sin(a+Math.PI/12)*r2)}X.closePath();X.fill();X.strokeStyle='#cc5555';X.lineWidth=2;X.stroke();X.restore()}
   }
-  // BASE
   X.fillStyle='#223';X.shadowBlur=30;X.shadowColor='#448';X.beginPath();X.arc(BX,BY,BS*.7,0,Math.PI*2);X.fill();X.shadowBlur=0;
   X.fillStyle='#334';X.fillRect(BX-BS/2,BY-BS/2,BS,BS);X.strokeStyle='#558';X.lineWidth=3;X.strokeRect(BX-BS/2,BY-BS/2,BS,BS);
   X.fillStyle='#445';X.fillRect(BX-BS/2+8,BY-BS/2+8,BS-16,BS-16);
-  X.fillStyle='#fff';X.font='bold 28px Arial';X.textAlign='center';X.textBaseline='middle';X.fillText('🏠',BX,BY);
+  X.fillStyle='#fff';X.font='bold 28px Arial';X.textAlign='center';X.textBaseline='middle';X.fillText('BASE',BX,BY);
   let bW=80;X.fillStyle='rgba(0,0,0,.6)';X.fillRect(BX-bW/2-1,BY-BS/2-18,bW+2,10);X.fillStyle='#333';X.fillRect(BX-bW/2,BY-BS/2-17,bW,8);
   let hr=base.hp/base.mhp;X.fillStyle=hr>.6?'#3388ff':hr>.3?'#ffaa00':'#ff3333';X.fillRect(BX-bW/2,BY-BS/2-17,bW*hr,8);
   X.fillStyle='#aaa';X.font='bold 10px Arial';X.fillText('LV '+base.lv,BX,BY+BS/2+14);
-  // Y-sorted entities
   let drawList=[];
   for(let t of trees){if(t.x<cam.x-60||t.x>cam.x+C.width+60||t.y<cam.y-100||t.y>cam.y+C.height+60)continue;drawList.push({y:t.y+10,draw:()=>drawTree(t)})}
   for(let z of zom)drawList.push({y:z.y,draw:()=>drawZombie(z)});
@@ -480,26 +464,18 @@ function draw(){
   drawList.push({y:P.y,draw:drawPlayer});
   drawList.sort((a,b)=>a.y-b.y);
   for(let d of drawList)d.draw();
-  // Bullets
   for(let b of bul){let c=b.fr?'#ff0':'#f44';X.strokeStyle=c;X.globalAlpha=.3;X.lineWidth=2;X.beginPath();X.moveTo(b.x-b.vx*3,b.y-b.vy*3);X.lineTo(b.x,b.y);X.stroke();X.globalAlpha=1;X.fillStyle=c;X.shadowBlur=8;X.shadowColor=c;X.beginPath();X.arc(b.x,b.y,3,0,Math.PI*2);X.fill();X.shadowBlur=0}
-  // Particles
   for(let pt of par){X.globalAlpha=pt.l/50;X.fillStyle=pt.c;X.beginPath();X.arc(pt.x,pt.y,pt.r*(pt.l/50),0,Math.PI*2);X.fill();X.globalAlpha=1}
-  // Damage numbers
   for(let d of dmg){X.globalAlpha=d.l/45;X.font='bold 15px Arial';X.textAlign='center';X.strokeStyle='rgba(0,0,0,.8)';X.lineWidth=3;X.strokeText(d.t,d.x,d.y);X.fillStyle=d.c;X.fillText(d.t,d.x,d.y);X.globalAlpha=1}
-  // Placement preview
-  if(placing){let rng=gR(placing)||200;X.strokeStyle='rgba(0,255,0,.2)';X.fillStyle='rgba(0,255,0,.05)';X.lineWidth=1.5;X.setLineDash([8,5]);X.beginPath();X.arc(placeX,placeY,rng,0,Math.PI*2);X.fill();X.stroke();X.setLineDash([]);X.globalAlpha=.6;X.fillStyle='#0f0';X.shadowBlur=15;X.shadowColor='#0f0';X.beginPath();X.arc(placeX,placeY,18,0,Math.PI*2);X.fill();X.shadowBlur=0;X.globalAlpha=1;X.fillStyle='#fff';X.font='bold 13px Arial';X.textAlign='center';X.fillText(nN[placing],placeX,placeY-28);X.fillStyle='#ffcc00';X.font='bold 11px Arial';X.fillText(nC[placing]+'💰',placeX,placeY-42)}
-  // World border
+  if(placing){let rng=gR(placing)||200;X.strokeStyle='rgba(0,255,0,.2)';X.fillStyle='rgba(0,255,0,.05)';X.lineWidth=1.5;X.setLineDash([8,5]);X.beginPath();X.arc(placeX,placeY,rng,0,Math.PI*2);X.fill();X.stroke();X.setLineDash([]);X.globalAlpha=.6;X.fillStyle='#0f0';X.shadowBlur=15;X.shadowColor='#0f0';X.beginPath();X.arc(placeX,placeY,18,0,Math.PI*2);X.fill();X.shadowBlur=0;X.globalAlpha=1;X.fillStyle='#fff';X.font='bold 13px Arial';X.textAlign='center';X.fillText(nN[placing],placeX,placeY-28);X.fillStyle='#ffcc00';X.font='bold 11px Arial';X.fillText('$'+nC[placing],placeX,placeY-42)}
   X.strokeStyle='#f00';X.lineWidth=4;X.shadowBlur=20;X.shadowColor='#f00';X.strokeRect(0,0,WW,WH);X.shadowBlur=0;
-  // Night overlay
   if(nightAlpha>0){X.fillStyle=`rgba(0,0,30,${nightAlpha})`;X.fillRect(cam.x,cam.y,C.width,C.height)}
   X.restore();
-  // Shield indicator on player (screen space)
   if(shieldTimer>0){
     let px=P.x-cam.x,py=P.y-cam.y;
     X.strokeStyle=`rgba(100,170,255,${.3+Math.sin(Date.now()/200)*.1})`;X.lineWidth=3;
     X.beginPath();X.arc(px,py,P.r+8,0,Math.PI*2);X.stroke();
   }
-  // Minimap
   MX.fillStyle='rgba(0,12,0,.92)';MX.fillRect(0,0,160,160);
   let sc=160/WW;
   MX.fillStyle='rgba(50,50,45,.4)';MX.fillRect(0,80-1,160,2);MX.fillRect(80-1,0,2,160);
@@ -577,12 +553,11 @@ function drawZombie(z){
   if(z.sl>0){X.strokeStyle='rgba(100,200,255,.5)';X.lineWidth=2;X.beginPath();X.arc(z.x,z.y+bob,z.r+5,0,Math.PI*2);X.stroke()}
   X.globalAlpha=1;
   if(z.hp<z.mhp){let bw=z.r*2;X.fillStyle='rgba(0,0,0,.6)';X.fillRect(z.x-bw/2-1,z.y-z.r-14,bw+2,6);X.fillStyle='#300';X.fillRect(z.x-bw/2,z.y-z.r-13,bw,4);X.fillStyle=z.hp/z.mhp>.5?'#e33':'#f80';X.fillRect(z.x-bw/2,z.y-z.r-13,bw*(z.hp/z.mhp),4)}
-  if(z.t==='boss'){X.fillStyle='#ff0';X.font='bold 12px Arial';X.textAlign='center';X.fillText('💀 BOSS',z.x,z.y+z.r+16)}
+  if(z.t==='boss'){X.fillStyle='#ff0';X.font='bold 12px Arial';X.textAlign='center';X.fillText('BOSS',z.x,z.y+z.r+16)}
 }
 
 function drawPlayer(){
   let p=P,bob=Math.sin(p.walk)*2;
-  // Shield effect
   if(shieldTimer>0){X.strokeStyle=`rgba(100,170,255,${.2+Math.sin(Date.now()/200)*.1})`;X.lineWidth=3;X.beginPath();X.arc(p.x,p.y,p.r+8,0,Math.PI*2);X.stroke()}
   X.fillStyle='rgba(0,0,0,.4)';X.beginPath();X.ellipse(p.x,p.y+p.r*.85,p.r*.85,p.r*.35,0,0,Math.PI*2);X.fill();
   let ls=Math.sin(p.walk)*7;
